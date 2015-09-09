@@ -53,9 +53,9 @@ var gsp = {
 	
 	"load":function(){																//executed on page load
 		if(!gsp.wdkOnly){
-			$('#header').load('home.gsp #header');
+			$('#loadHeader').load('home.gsp #header');
 			gsp.loadPageContent();
-			$('#footer').load('home.gsp #footer');
+			$('#loadFooter').load('home.gsp #footer');
 			$('#mainStyle').load('main.css');
 			$('#pageStyle').load(gsp.p+'.css');
 		}
@@ -64,7 +64,7 @@ var gsp = {
 	"loadPageContent":function(){
 		var pageString = gsp.p+".gsp";
 		
-		$('#content').load(pageString+ ' #content');
+		$('#loadContent').load(pageString+ ' #content');
 		
 	},
 	
